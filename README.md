@@ -5,7 +5,7 @@
 ```sh
 git clone https://github.com/dgrodziak/dotfiles.git
 # [Optional] Checkout branch for machine/group-specific configurations. See "Local Customizations" below.
-./install
+./install.ps1
 ```
 
 Note that the install script is idempotent: it can safely be run multiple times.

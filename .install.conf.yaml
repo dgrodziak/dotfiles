@@ -7,9 +7,9 @@
 
 - shell:
   # Create local files if they're not already created
-  - touch gitconfig_local
-  - touch shell_local
-  - touch ssh/config_local
+  - type nul >> gitconfig_local
+  - type nul >> shell_local
+  - type nul >> ssh/config_local
 
 - link:
     ~/.bash:
@@ -20,24 +20,20 @@
     ~/.config/fish/conf.d: fish/conf.d
     ~/.config/fish/functions: fish/functions
     ~/.config/starship.toml: starship.toml
-    ~/.editrc:
-    ~/.inputrc:
     ~/.gitconfig:
     ~/.gitconfig_local:
     ~/.gitignore_global:
     ~/.ipython/profile_default/ipython_config.py: ipython/ipython_config.py
     ~/.ipython/profile_default/ipython_kernel_config.py: ipython/ipython_kernel_config.py
     ~/.ipython/profile_default/startup/disable_warnings.py: ipython/disable_warnings.py
-    ~/.pythonrc:
     ~/.shell:
     ~/.shell_local:
     ~/.ssh/config: ssh/config
     ~/.ssh/config_local: ssh/config_local
-    ~/.tmux.conf:
-    ~/.vim:
-    ~/.vimrc: 
-    ~/.zsh:
-    ~/.zshrc:
+    # Windows-specific links
+    ~/Documents/PowerShell/profile.ps1: powershell/profile.ps1
+    ~/vimfiles: vim
+    ~/_vimrc: vimrc
 
 - create:
   - ~/.vim/undodir
