@@ -1,0 +1,34 @@
+[submodule "vimfiles/pack/github/start/copilot.vim"]
+	path = vim/pack/vendor/start/copilot.vim
+	url = https://github.com/github/copilot.vim
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
+[submodule "vim/pack/vendor/start/ctrlp.vim"]
+	path = vim/pack/vendor/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "vim/pack/vendor/start/vim-easymotion"]
+	path = vim/pack/vendor/start/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
+[submodule "vim/pack/vendor/start/nerdtree"]
+	path = vim/pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "vim/pack/vendor/start/ack.vim"]
+	path = vim/pack/vendor/start/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "shell/plugins/dircolors-solarized"]
+	path = shell/plugins/dircolors-solarized
+	url = https://github.com/seebi/dircolors-solarized.git
+[submodule "zsh/plugins/zsh-syntax-highlighting"]
+	path = zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh/plugins/zsh-completions"]
+	path = zsh/plugins/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions.git
+[submodule "vim/pack/vendor/start/vim-surround"]
+	path = vim/pack/vendor/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "vim/pack/vendor/start/vim-mundo"]
+	path = vim/pack/vendor/start/vim-mundo
+	url = https://github.com/simnalamburt/vim-mundo

@@ -1,0 +1,3 @@
+# Set (basic) vim emulation for GNU Readline library, which many
+# programs use for input (e.g., the Python REPL).
+set editing-mode vi

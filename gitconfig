@@ -1,0 +1,65 @@
+[user]
+    name = Dan Grodziak
+    email = dgrodziak@gmail.com
+
+[alias]
+    co = checkout
+    br = branch -vv
+    bra = branch -vv --all
+    bD = branch -D
+    rb = rebase
+    pullrb = pull --rebase
+    cm = commit -v
+    cma = commit --ammend -v
+    st = status
+    s = status -sb
+    rpo = remote prune origin
+    di = diff
+    dis = diff --stat
+    diw = diff --color-words
+    dc = diff --cached
+    dcs = diff --cached --stat
+    dcw = diff --cached --color-words
+    dh = diff HEAD~
+    dhs = diff HEAD~ --stat
+    dhw = diff HEAD~ --color-words
+    du = diff @{u}...
+    dus = diff @{u}... --stat
+    duw = diff @{u}... --color-words
+    last = log -1 HEAD
+    l = log --graph --oneline
+    ls = log --graph --oneline -5
+    lm = log --graph --oneline -15
+    ll = log --graph --oneline -30
+    la = log --all --graph --oneline
+    las = log --all --graph --oneline -5
+    lam = log --all --graph --oneline -15
+    lal = log --all --graph --oneline -30
+    versions = tag -l --sort=version:refname
+    count = diff --stat "4b825dc642cb6eb9a060e54bf8d69288fbee4904" # hash of empty tree
+    credit = shortlog -sn
+
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = taggerdate
+
+[push]
+    autoSetupRemote = true
+
+[merge]
+    tool = vimdiff
+    conflictstyle = zdiff3
+
+[diff]
+    tool = vimdiff
+    algorithm = histogram 
+
+[core]
+    autocrlf = input 
+    editor = vim
+    excludesfile = ~/.gitignore_global
+
+[include]
+    path = ~/.gitconfig_local
