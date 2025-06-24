@@ -8,3 +8,5 @@ end
 # Aliases
 source ~/.shell/aliases.sh
 
+# Local configs (not in git)
+source ~/.shell_local
