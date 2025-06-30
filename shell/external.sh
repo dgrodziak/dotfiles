@@ -10,10 +10,8 @@ export PYTHONSTARTUP=$HOME/.pythonrc
 # Setup brew environment if available
 if [[ -f "$(which brew)" ]]; then
     eval "$(brew shellenv)"
-    export HOMEBREW_NO_INSTALL_FROM_API=1
 elif [[ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-    export HOMEBREW_NO_INSTALL_FROM_API=1
 fi 
 
 # Add miniconda to the $PATH if available
