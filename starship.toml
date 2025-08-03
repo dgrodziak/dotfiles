@@ -1,8 +1,7 @@
 format = '$battery$username$hostname$directory$git_branch$git_status$git_state$cmd_duration$character'
+add_newline = true
 
 "$schema" = 'https://starship.rs/config-schema.json'
-
-add_newline = true
 
 [character]
 success_symbol = "\n[I>](green)"
@@ -11,3 +10,7 @@ vicmd_symbol = "\n[N>](red)"
 vimcmd_replace_one_symbol = "\n[r>](purple)"
 vimcmd_replace_symbol = "\n[R>](purple)"
 vimcmd_visual_symbol = "\n[V>](purple)"
+
+[git_status]
+ahead = "\u2191"
+behind = "\u2193"
