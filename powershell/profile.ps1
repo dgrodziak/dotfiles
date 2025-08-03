@@ -1,42 +1,4 @@
-# Note: I might need to install the package provider NuGet and/or PowerShellGet
-# in order to install posh-git.
-
-##################################################
-# Install posh-git for convenient Git integration
-##################################################
-# Install-Module -Name posh-git -Force -Scope CurrentUser
-Import-Module posh-git -ErrorAction SilentlyContinue
-$GitPromptSettings.DefaultPromptBeforeSuffix.Text = '`n'
-$GitPromptSettings.DefaultPromptAbbreviateHomeDirectory = $true
-$GitPromptSettings.DefaultPromptPrefix = '`n'
-
-function prompt {
-    $lastCommand = Get-History -Count 1
-    if($lastCommand) {
-        $executionTime = $lastCommand.EndExecutionTime - $lastCommand.StartExecutionTime
-	$executionTimeMS = $executionTime.TotalMilliseconds
-	if ( $executionTimeMS -gt 60000 ) {
-            $timeStr = ' (' + $executionTime.ToString("hh\:mm\:ss") + ')'
-	}
-	elseif ( $executionTimeMS -gt 1000 ) {
-            $timeStr = ' (' + [math]::Round($executionTimeMS / 1000, 2) + "s)"
-	}
-	else {
-            $timeStr = ' (' + [math]::Round($executionTimeMS, 0) + 'ms)'
-	}
-    }
-    else { 
-	$timeStr = '' 
-    }
-    $GitPromptSettings.DefaultPromptBeforeSuffix.Text = $timeStr + '`n'
-    & $GitPromptScriptBlock
-} 
-
-##################################################
-# Import conda PowerShell objects 
-##################################################
-& C:\Users\dgrodziak\miniconda3\shell\condabin\conda-hook.ps1
-
+Invoke-Expression (&starship init powershell)
 
 ##################################################
 # Custom (vim-like) key bindings using PSReadLine 
