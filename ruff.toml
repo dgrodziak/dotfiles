@@ -1,0 +1,5 @@
+extend-exclude  = [".venv","target","logs"]
+line-length = 120
+
+[lint]
+select = ["E", "F", "I", "LOG", "RUF", "UP"]

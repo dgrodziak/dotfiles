@@ -15,10 +15,6 @@
     ~/.bash:
     ~/.bash_profile:
     ~/.bashrc:
-    ~/.config/fish/config.fish: fish/config.fish
-    ~/.config/fish/completions: fish/completions
-    ~/.config/fish/conf.d: fish/conf.d
-    ~/.config/fish/functions: fish/functions
     ~/.config/starship.toml: starship.toml
     ~/.gitconfig:
     ~/.gitconfig_local:
@@ -32,6 +28,7 @@
     ~/.ssh/config_local: ssh/config_local
     # Windows-specific links
     ~/Documents/PowerShell/profile.ps1: powershell/profile.ps1
+    ~/AppData/Roaming/ruff/ruff.toml: ruff.toml
     ~/vimfiles: vim
     ~/_vimrc: vimrc
 
