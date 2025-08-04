@@ -1,16 +1,12 @@
-format = '$battery$username$hostname$directory$git_branch$git_status$git_state$cmd_duration$character'
-add_newline = true
-
 "$schema" = 'https://starship.rs/config-schema.json'
 
 [character]
-success_symbol = "\n[I>](green)"
-error_symbol = "[\\(!\\)](red)\n[I>](green)"
-vicmd_symbol = "\n[N>](red)"
-vimcmd_replace_one_symbol = "\n[r>](purple)"
-vimcmd_replace_symbol = "\n[R>](purple)"
-vimcmd_visual_symbol = "\n[V>](purple)"
+success_symbol = "[I>](green)"
+error_symbol = "[I>](green)"
+vicmd_symbol = "[N>](red)"
+vimcmd_replace_one_symbol = "[r>](purple)"
+vimcmd_replace_symbol = "[R>](purple)"
+vimcmd_visual_symbol = "[V>](purple)"
 
-# [git_status]
-# ahead = "\u2191"
-# behind = "\u2193"
+[status]
+disabled = false
