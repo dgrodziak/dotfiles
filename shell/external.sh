@@ -7,6 +7,9 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 # Python startup file
 export PYTHONSTARTUP=$HOME/.pythonrc
 
+# Rustup added this
+. "$HOME/.cargo/env"
+
 # Setup brew environment if available
 if [[ -f "$(which brew)" ]]; then
     eval "$(brew shellenv)"
