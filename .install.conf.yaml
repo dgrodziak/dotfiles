@@ -30,6 +30,7 @@
     ~/AppData/Local/nvim/init.lua: nvim/init.lua
     ~/AppData/Roaming/ruff/ruff.toml: ruff.toml
     ~/Documents/PowerShell/profile.ps1: powershell/profile.ps1
+    ~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1: powershell/profile.ps1
     ~/vimfiles: vim
     ~/_vimrc: vimrc
 
