@@ -52,12 +52,19 @@
     autoSetupRemote = true
 
 [merge]
-    tool = vimdiff
+	tool = nvimdiff
     conflictstyle = zdiff3
 
 [diff]
     tool = vimdiff
     algorithm = histogram 
+
+[mergetool "nvimdiff"]
+	cmd = nvim -d \"$LOCAL\" \"$MERGED\" \"$REMOTE\" -c \"wincmd l\" -c \"norm ]c\"
+	keepBackup = false
+
+[fetch]
+	prune = true
 
 [core]
     autocrlf = input 
