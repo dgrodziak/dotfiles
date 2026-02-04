@@ -27,7 +27,7 @@
     ~/.ssh/config: ssh/config
     ~/.ssh/config_local: ssh/config_local
     # Windows-specific links
-    ~/AppData/Local/nvim/init.lua: nvim/init.lua
+    ~/AppData/Local/nvim: nvim
     ~/AppData/Roaming/ruff/ruff.toml: ruff.toml
     ~/Documents/PowerShell/profile.ps1: powershell/profile.ps1
     ~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1: powershell/profile.ps1
