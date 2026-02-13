@@ -1,3 +1,6 @@
+# Ignore Claude settings until I can get them set up
+.claude/settings.local.json
+
 # Local files that we don't want tracked by version control
 gitconfig_local
 shell_local
