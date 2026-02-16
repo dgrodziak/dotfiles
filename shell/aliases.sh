@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Use colors in coreutils utilities output
 alias grep='grep --color=auto'
 
@@ -20,4 +22,3 @@ alias gco='git checkout'
 alias gcm='git commit -m'
 alias gla='git log --oneline --graph --all'
 alias gl='git log --oneline --graph'
-

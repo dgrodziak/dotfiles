@@ -1,25 +1,35 @@
+#!/usr/bin/env bash
+
 # Functions
-source ~/.shell/functions.sh
+# shellcheck source=shell/functions.sh
+source "${HOME}/.shell/functions.sh"
 
 # Settings
-source ~/.bash/settings.bash
+# shellcheck source=bash/settings.bash
+source "${HOME}/.bash/settings.bash"
 
 # Boostrap
-source ~/.shell/bootstrap.sh
+# shellcheck source=shell/bootstrap.sh
+source "${HOME}/.shell/bootstrap.sh"
 
 # External settings
-source ~/.shell/external.sh
+# shellcheck source=shell/external.sh
+source "${HOME}/.shell/external.sh"
 
 # Aliases
-source ~/.shell/aliases.sh
+# shellcheck source=shell/aliases.sh
+source "${HOME}/.shell/aliases.sh"
 
 # Custom prompt
-source ~/.bash/prompt.bash
+# shellcheck source=bash/prompt.bash
+source "${HOME}/.bash/prompt.bash"
 
 # Plugins
-source ~/.bash/plugins.bash
+# shellcheck source=bash/plugins.bash
+source "${HOME}/.bash/plugins.bash"
 
 # Allow local customizations (not checked in to version control)
-if [ -f ~/.shell.local.sh ]; then
-  source ~/.shell.local.sh
+if [ -f "${HOME}/.shell.local.sh" ]; then
+  # shellcheck source=/dev/null
+  source "${HOME}/.shell.local.sh"
 fi
