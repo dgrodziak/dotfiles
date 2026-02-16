@@ -1,4 +1,4 @@
-# Dotfiles 
+# Dotfiles
 
 ## Getting Started
 
@@ -12,12 +12,30 @@ Note that the install script is idempotent: it can safely be run multiple times.
 
 Dotfiles uses [Dotbot](https://github.com/anishathalye/dotbot) for installation.
 
+## Prerequisites
+
+Required:
+
+- `git`
+- One or more shells you use (`bash`, `zsh`, and/or `fish`)
+
+Optional but referenced by configs:
+
+- `tmux`
+- `neovim`
+- `starship`
+- `eza`
+- `xclip` (Linux clipboard integration for tmux)
+- Homebrew (`brew`) on macOS/Linux
+
 ## Local Customizations
 
-Local customizations for some progams can be made by editing these files:
-* `git`: `~/.gitconfig_local`
-* `zsh` / `bash`: `~/.shell_local`
-* `ssh`: `~/ssh/config_local`
+Local customizations can be made by adding `.local` to the name. For example:
+
+- `git`: `~/.gitconfig.local`
+- `zsh` / `bash`: `~/.shell.local.sh`
+- `fish`: `~/.shell.local.fish`
+- `ssh`: `~/.ssh/config.local`
 
 ## Branch Hierarchy
 

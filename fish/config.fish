@@ -9,4 +9,6 @@ end
 source ~/.shell/aliases.sh
 
 # Local configs (not in git)
-source ~/.shell_local
+if test -f ~/.shell.local.fish
+    source ~/.shell.local.fish
+end

@@ -10,7 +10,7 @@
     rb = rebase
     pullrb = pull --rebase
     cm = commit -v
-    cma = commit --ammend -v
+    cma = commit --amend -v
     st = status
     s = status -sb
     rpo = remote prune origin
@@ -72,4 +72,4 @@
     excludesfile = ~/.gitignore_global
 
 [include]
-    path = ~/.gitconfig_local
+    path = ~/.gitconfig.local

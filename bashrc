@@ -20,7 +20,6 @@ source ~/.bash/prompt.bash
 source ~/.bash/plugins.bash
 
 # Allow local customizations (not checked in to version control)
-if [ -f ~/.shell_local ]; then
-    source ~/.shell_local
+if [ -f ~/.shell.local.sh ]; then
+  source ~/.shell.local.sh
 fi
-

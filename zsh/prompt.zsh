@@ -284,19 +284,23 @@ function PR_VARS() {
             fi
         fi
     done
-    # show project-specific vars
-    while read v; do
-        if [[ "${v}" =~ '[A-Z_]+' ]]; then
-            # valid environment variable
-            if [[ ${_pr_var_list[(i)${v}]} -gt ${#_pr_var_list} ]]; then
-                # not shown yet
-                if export | grep -Eq "^${v}="; then
-                    # exported
-                    printf '%s' "$spc%{$fg[cyan]%}${v}=${(P)${v}}%{$reset_color%}$nl"
+    # show project-specific vars from repo-root .showvars, if present
+    local showvars_file
+    showvars_file="$(git rev-parse --show-toplevel 2>/dev/null)/.showvars"
+    if [[ -r "${showvars_file}" ]]; then
+        while IFS= read -r v; do
+            if [[ "${v}" =~ '[A-Z_]+' ]]; then
+                # valid environment variable
+                if [[ ${_pr_var_list[(i)${v}]} -gt ${#_pr_var_list} ]]; then
+                    # not shown yet
+                    if export | grep -Eq "^${v}="; then
+                        # exported
+                        printf '%s' "$spc%{$fg[cyan]%}${v}=${(P)${v}}%{$reset_color%}$nl"
+                    fi
                 fi
             fi
-        fi
-    done < <(git exec cat .showvars 2>/dev/null)
+        done < "${showvars_file}"
+    fi
 }
 
 # Prompt
