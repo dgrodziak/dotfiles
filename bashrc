@@ -21,8 +21,17 @@ source "${HOME}/.shell/external.sh"
 source "${HOME}/.shell/aliases.sh"
 
 # Custom prompt
-# shellcheck source=bash/prompt.bash
-source "${HOME}/.bash/prompt.bash"
+if command -v starship &> /dev/null; then
+  if [ -s "${HOME}/.config/starship.local.toml" ]; then
+    export STARSHIP_CONFIG="${HOME}/.config/starship.local.toml"
+  else
+    export STARSHIP_CONFIG="${HOME}/.config/starship.toml"
+  fi
+  eval "$(starship init bash)"
+else
+  # shellcheck source=bash/prompt.bash
+  source "${HOME}/.bash/prompt.bash"
+fi
 
 # Plugins
 # shellcheck source=bash/plugins.bash

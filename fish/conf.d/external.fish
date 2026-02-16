@@ -13,5 +13,10 @@ end
 
 # Custom prompt
 if type -q starship
+    if test -s ~/.config/starship.local.toml
+        set -gx STARSHIP_CONFIG ~/.config/starship.local.toml
+    else
+        set -gx STARSHIP_CONFIG ~/.config/starship.toml
+    end
     starship init fish | source
 end

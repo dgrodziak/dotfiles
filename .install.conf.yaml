@@ -10,6 +10,7 @@
     - touch gitconfig.local
     - touch shell.local.sh
     - touch shell.local.fish
+    - touch starship.local.toml
     - touch ssh/config.local
 
 - link:
@@ -23,6 +24,7 @@
     ~/.config/nvim: nvim
     ~/.config/ruff/ruff.toml: ruff.toml
     ~/.config/starship.toml: starship.toml
+    ~/.config/starship.local.toml: starship.local.toml
     ~/.editrc:
     ~/.inputrc:
     ~/.gitconfig:

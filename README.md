@@ -27,6 +27,7 @@ Local customizations can be made by adding `.local` to the name. For example:
 - `git`: `~/.gitconfig.local`
 - `zsh` / `bash`: `~/.shell.local.sh`
 - `fish`: `~/.shell.local.fish`
+- `starship`: `~/.config/starship.local.toml`
 - `ssh`: `~/.ssh/config.local`
 
 ## Branch Hierarchy
