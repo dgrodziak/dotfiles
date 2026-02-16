@@ -4,7 +4,6 @@
 
 ```sh
 git clone https://github.com/dgrodziak/dotfiles.git
-# [Optional] Checkout branch for machine/group-specific configurations. See "Local Customizations" below.
 ./install
 ```
 
@@ -12,21 +11,14 @@ Note that the install script is idempotent: it can safely be run multiple times.
 
 Dotfiles uses [Dotbot](https://github.com/anishathalye/dotbot) for installation.
 
-## Prerequisites
+## Linting and Formatting
 
-Required:
+This repository uses [`prek`](https://github.com/j178/prek) for pre-commit hooks and CI checks.
 
-- `git`
-- One or more shells you use (`bash`, `zsh`, and/or `fish`)
-
-Optional but referenced by configs:
-
-- `tmux`
-- `neovim`
-- `starship`
-- `eza`
-- `xclip` (Linux clipboard integration for tmux)
-- Homebrew (`brew`) on macOS/Linux
+```sh
+prek install
+prek run --all-files
+```
 
 ## Local Customizations
 
