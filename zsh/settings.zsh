@@ -25,8 +25,15 @@ setopt extendedhistory
 # Time to wait for additional characters in a sequence
 KEYTIMEOUT=1 # corresponds to 10ms
 
-# Use vim as the editor
-export EDITOR=vim
+# Use neovim when available, then vim, otherwise vi
+if command -v nvim >/dev/null 2>&1; then
+  export EDITOR=nvim
+elif command -v vim >/dev/null 2>&1; then
+  export EDITOR=vim
+else
+  export EDITOR=vi
+fi
+export VISUAL="$EDITOR"
 
 # Use vim style line editing in zsh
 bindkey -v
