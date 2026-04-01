@@ -1,18 +1,20 @@
 return {
   {
-    "mason-org/mason-lspconfig.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ensure_installed = { "ty" },
-      automatic_enable = { "ty" },
     },
   },
   {
     "neovim/nvim-lspconfig",
     opts = {
+      codeLens = { enabled = true },
       servers = {
         pyright = { mason = false },
         taplo = { mason = false },
-        ty = { enable = true },
+        ty = {
+          enable = true,
+        },
       },
     },
   },
