@@ -56,8 +56,11 @@
     conflictstyle = zdiff3
 
 [diff]
-    tool = vimdiff
+    tool = nvimdiff
     algorithm = histogram 
+
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
 [mergetool "nvimdiff"]
 	cmd = nvim -d \"$LOCAL\" \"$MERGED\" \"$REMOTE\" -c \"wincmd l\" -c \"norm ]c\"
