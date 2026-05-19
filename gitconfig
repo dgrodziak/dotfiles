@@ -3,6 +3,7 @@
     email = dgrodziak@gmail.com
 
 [alias]
+    pr = log origin/main.. --reverse --pretty="###\\ %s%n%n%b"
     co = checkout
     br = branch -vv
     bra = branch -vv --all
