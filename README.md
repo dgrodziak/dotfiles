@@ -35,7 +35,7 @@ Local customizations can be made by adding `.local` to the name. For example:
 Custom configurations, as needed, are maintained in separate branches in this repo.
 
 ```
-master
+main
 |
 +- windows
 ```
