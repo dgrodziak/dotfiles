@@ -1,0 +1,11 @@
+{
+  "editorMode": "vim",
+  "effortLevel": "xhigh",
+  "permissions": {
+    "allow": [],
+    "ask": [],
+    "deny": [],
+    "defaultMode": "auto"
+  },
+  "tui": "fullscreen"
+}
