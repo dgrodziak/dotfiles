@@ -1,0 +1,20 @@
+{
+  "approvalMode": "auto-review",
+  "display": {
+    "showLineNumbers": true,
+    "showThinkingBlocks": true,
+    "showStatusIndicators": true,
+    "showStatusLineRunningTime": true
+  },
+  "hints": true,
+  "editor": { "vimMode": true },
+  "maxMode": true,
+  "maxModeAutoEnabled": true,
+  "permissions": { "allow": [], "deny": [] },
+  "notifications": true,
+  "rewind": true,
+  "sandbox": {
+    "mode": "enabled"
+  },
+  "version": 1
+}

@@ -17,7 +17,7 @@
     ~/.bash:
     ~/.bash_profile:
     ~/.bashrc:
-    ~/.claude/settings.json: .claude/settings.json
+    ~/.claude/settings.json: claude/settings.json
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/completions: fish/completions
     ~/.config/fish/conf.d: fish/conf.d
@@ -26,6 +26,7 @@
     ~/.config/ruff/ruff.toml: ruff.toml
     ~/.config/starship.toml: starship.toml
     ~/.config/starship.local.toml: starship.local.toml
+    ~/.cursor/cli-config.json: cursor/cli-config.json
     ~/.editrc:
     ~/.inputrc:
     ~/.gitconfig:
