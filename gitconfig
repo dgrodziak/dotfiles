@@ -56,6 +56,9 @@
 	tool = nvimdiff
     conflictstyle = zdiff3
 
+[rebase]
+	updateRefs = true
+
 [diff]
     tool = nvimdiff
     algorithm = histogram 
