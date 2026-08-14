@@ -26,7 +26,6 @@
     ~/.config/ruff/ruff.toml: ruff.toml
     ~/.config/starship.toml: starship.toml
     ~/.config/starship.local.toml: starship.local.toml
-    ~/.cursor/cli-config.json: cursor/cli-config.json
     ~/.editrc:
     ~/.inputrc:
     ~/.gitconfig:
