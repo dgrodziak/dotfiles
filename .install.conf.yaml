@@ -18,6 +18,7 @@
     ~/.bash_profile:
     ~/.bashrc:
     ~/.claude/settings.json: claude/settings.json
+    ~/.codex/config.toml: codex/config.toml
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/completions: fish/completions
     ~/.config/fish/conf.d: fish/conf.d

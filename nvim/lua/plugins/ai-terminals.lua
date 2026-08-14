@@ -27,8 +27,8 @@ return {
   keys = {
     { "<leader>al", toggle("claude"), desc = "Toggle Claude (term)" },
     { "<leader>aL", toggle({ "claude", "--resume" }), desc = "Resume Claude (term)" },
-    { "<leader>ax", toggle("codex"), desc = "Toggle Codex" },
-    { "<leader>aX", toggle({ "codex", "resume" }), desc = "Resume Codex" },
+    { "<leader>ax", toggle({ "codex", "--profile", "local" }), desc = "Toggle Codex" },
+    { "<leader>aX", toggle({ "codex", "resume", "--profile", "local" }), desc = "Resume Codex" },
     { "<leader>au", toggle("cursor-agent"), desc = "Toggle Cursor Agent" },
     { "<leader>aU", toggle({ "cursor-agent", "--resume" }), desc = "Resume Cursor Agent" },
   },
