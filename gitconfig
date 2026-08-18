@@ -73,9 +73,12 @@
 [fetch]
 	prune = true
 
+[rerere]
+	enabled = true
+
 [core]
     autocrlf = input 
-    editor = vim
+    editor = nvim
     excludesfile = ~/.gitignore_global
 
 [include]
