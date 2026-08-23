@@ -1,0 +1,2 @@
+# Keep user-local Claude Code configs out of git
+claude/settings.json filter=claude-local

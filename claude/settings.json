@@ -1,11 +1,14 @@
 {
-  "editorMode": "vim",
-  "effortLevel": "xhigh",
   "permissions": {
     "allow": [],
-    "ask": [],
     "deny": [],
+    "ask": [],
     "defaultMode": "auto"
   },
-  "tui": "fullscreen"
+  "effortLevel": "xhigh",
+  "tui": "fullscreen",
+  "editorMode": "vim",
+  "enabledPlugins": {
+    "mattpocock-skills@claude-plugins-official": true
+  }
 }
