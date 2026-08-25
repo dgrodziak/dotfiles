@@ -81,11 +81,5 @@
     editor = nvim
     excludesfile = ~/.gitignore_global
 
-# Keep user-local Claude Code configs out of git
-[filter "claude-local"]
-    clean = jq 'del(.statusLine)'
-    smudge = cat
-    required = true
-
 [include]
     path = ~/.gitconfig.local

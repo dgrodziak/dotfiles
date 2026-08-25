@@ -19,6 +19,7 @@
     ~/.bash_profile:
     ~/.bashrc:
     ~/.claude/settings.json: claude/settings.json
+    ~/.claude/statusline.sh: claude/statusline.sh
     ~/.codex/config.toml: codex/config.toml
     ~/.codex/local.config.toml: codex/local.config.toml
     ~/.config/fish/config.fish: fish/config.fish
