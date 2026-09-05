@@ -17,3 +17,14 @@ end, { desc = "Terminal Vertical (Root Dir)" })
 vim.keymap.set({ "n", "t" }, "<leader>fV", function()
   vertical_terminal(vim.fn.getcwd(0))
 end, { desc = "Terminal Vertical (cwd)" })
+
+-- Override LazyVim's <c-/> (bottom split, count 1) so the vertical terminal is
+-- the one that toggles. <c-_> is what many terminals actually send for <c-/>.
+-- LazyVim's <leader>ft / <leader>fT still open the bottom terminal.
+vim.keymap.set({ "n", "t" }, "<c-/>", function()
+  vertical_terminal(LazyVim.root())
+end, { desc = "Terminal Vertical (Root Dir)" })
+
+vim.keymap.set({ "n", "t" }, "<c-_>", function()
+  vertical_terminal(LazyVim.root())
+end, { desc = "which_key_ignore" })
