@@ -11,7 +11,6 @@ return {
       codeLens = { enabled = true },
       servers = {
         pyright = { mason = false },
-        taplo = { mason = false },
         ty = {
           enable = true,
         },
