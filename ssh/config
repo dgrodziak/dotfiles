@@ -1,6 +1,6 @@
 # includes must go at the top
 # host-specific customization
-Include ~/.ssh/config_local
+Include ~/.ssh/config.local
 
 Host github
     User git

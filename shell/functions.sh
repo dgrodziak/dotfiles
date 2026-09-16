@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 path_remove() {
     PATH=$(echo -n "$PATH" | awk -v RS=: -v ORS=: "\$0 != \"$1\"" | sed 's/:$//')
 }
@@ -21,13 +23,14 @@ dfu() {
 
 # Create a directory and cd into it
 mcd() {
-    mkdir "${1}" && cd "${1}"
+    mkdir "${1}" && cd "${1}" || return
 }
 
 # Go up [n] directories
 up()
 {
-    local cdir="$(pwd)"
+    local cdir
+    cdir="$(pwd)"
     if [[ "${1}" == "" ]]; then
         cdir="$(dirname "${cdir}")"
     elif ! [[ "${1}" =~ ^[0-9]+$ ]]; then
@@ -36,7 +39,8 @@ up()
         echo "Error: argument must be positive"
     else
         for ((i=0; i<${1}; i++)); do
-            local ncdir="$(dirname "${cdir}")"
+            local ncdir
+            ncdir="$(dirname "${cdir}")"
             if [[ "${cdir}" == "${ncdir}" ]]; then
                 break
             else
@@ -44,5 +48,5 @@ up()
             fi
         done
     fi
-    cd "${cdir}"
+    cd "${cdir}" || return
 }

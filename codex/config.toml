@@ -1,0 +1,16 @@
+personality = "pragmatic"
+model_reasoning_effort = "xhigh"
+approval_policy = "on-request"
+approvals_reviewer = "auto_review"
+
+[mcp_servers.deepwiki]
+url = "https://mcp.deepwiki.com/mcp"
+enabled = true
+
+[plugins."github@openai-curated"]
+enabled = true
+
+[tui]
+status_line = ["current-dir", "model", "reasoning", "context-used", "five-hour-limit", "weekly-limit", "git-branch", "codex-version"]
+status_line_use_colors = true
+

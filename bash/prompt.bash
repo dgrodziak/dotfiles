@@ -1,18 +1,15 @@
-ATTRIBUTE_BOLD='\[\e[1m\]'
-ATTRIBUTE_RESET='\[\e[0m\]'
 COLOR_DEFAULT='\[\e[39m\]'
 COLOR_RED='\[\e[31m\]'
 COLOR_GREEN='\[\e[32m\]'
 COLOR_YELLOW='\[\e[33m\]'
 COLOR_BLUE='\[\e[34m\]'
-COLOR_MAGENTA='\[\e[35m\]'
 COLOR_CYAN='\[\e[36m\]'
 COLOR_LIGHTGRAY='\[\e[37m\]'
 COLOR_LIGHTMAGENTA='\[\e[38;5;207m\]'
 
 machine_name() {
-    if [[ -f $HOME/.name ]]; then
-        cat $HOME/.name
+    if [[ -f "${HOME}/.name" ]]; then
+        cat "${HOME}/.name"
     else
         hostname
     fi

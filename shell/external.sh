@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true
 
@@ -8,6 +10,7 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 export PYTHONSTARTUP=$HOME/.pythonrc
 
 # Rustup added this
+# shellcheck source=/dev/null
 . "$HOME/.cargo/env"
 
 # Setup brew environment if available
@@ -18,9 +21,10 @@ elif [[ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]]; then
 fi 
 
 # Add miniconda to the $PATH if available
-if [[ -f ~/miniconda3/etc/profile.d/conda.sh ]]; then 
-    . ~/miniconda3/etc/profile.d/conda.sh
-fi 
+if [[ -f "${HOME}/miniconda3/etc/profile.d/conda.sh" ]]; then
+    # shellcheck source=/dev/null
+    . "${HOME}/miniconda3/etc/profile.d/conda.sh"
+fi
 
 # Add mssql-tools to $PATH if available
 if [[ -d /opt/mssql-tools18/bin ]]; then

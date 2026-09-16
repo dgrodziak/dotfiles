@@ -3,6 +3,7 @@
     email = dgrodziak@gmail.com
 
 [alias]
+    pr = log origin/main.. --reverse --pretty="###\\ %s%n%n%b"
     co = checkout
     br = branch -vv
     bra = branch -vv --all
@@ -10,7 +11,7 @@
     rb = rebase
     pullrb = pull --rebase
     cm = commit -v
-    cma = commit --ammend -v
+    cma = commit --amend -v
     st = status
     s = status -sb
     rpo = remote prune origin
@@ -55,9 +56,15 @@
 	tool = nvimdiff
     conflictstyle = zdiff3
 
+[rebase]
+	updateRefs = true
+
 [diff]
-    tool = vimdiff
+    tool = nvimdiff
     algorithm = histogram 
+
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
 [mergetool "nvimdiff"]
 	cmd = nvim -d \"$LOCAL\" \"$MERGED\" \"$REMOTE\" -c \"wincmd l\" -c \"norm ]c\"
@@ -66,9 +73,12 @@
 [fetch]
 	prune = true
 
+[rerere]
+	enabled = true
+
 [core]
     autocrlf = input 
-    editor = vim
+    editor = nvim
     excludesfile = ~/.gitignore_global
 
 [include]

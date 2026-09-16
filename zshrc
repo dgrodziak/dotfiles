@@ -17,12 +17,21 @@ source ~/.shell/external.sh
 source ~/.shell/aliases.sh
 
 # Custom prompt
-source ~/.zsh/prompt.zsh
+if command -v starship &> /dev/null; then
+    if [ -s ~/.config/starship.local.toml ]; then
+        export STARSHIP_CONFIG=~/.config/starship.local.toml
+    else
+        export STARSHIP_CONFIG=~/.config/starship.toml
+    fi
+    eval "$(starship init zsh)"
+else
+    source ~/.zsh/prompt.zsh
+fi
 
 # External plugins (initialized after)
 source ~/.zsh/plugins_after.zsh
 
 # Allow local customizations (not checked in to version control)
-if [ -f ~/.shell_local ]; then
-    source ~/.shell_local
+if [ -f ~/.shell.local.sh ]; then
+    source ~/.shell.local.sh
 fi
