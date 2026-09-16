@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Set the tmux window's `!` flag when a coding agent finishes its turn.
+#
+#   usage: agent-notify
+#
+# Wired up from:
+#   claude/settings.json  hooks.Stop
+#   codex/config.toml     notify
+#
+# Write the bell to the outer pane's tty so it also works inside Neovim.
+# tmux keeps the flag on an inactive window until it is visited.
+# AGENT_NOTIFY_DISABLE=1 silences the notifier; failures are ignored.
+
+set -u
+
+if [[ ${AGENT_NOTIFY_DISABLE:-0} == 1 || -z ${TMUX:-} || -z ${TMUX_PANE:-} ]]; then
+    exit 0
+fi
+
+command -v tmux >/dev/null 2>&1 || exit 0
+
+pane_tty=$(tmux display-message -p -t "$TMUX_PANE" '#{pane_tty}' 2>/dev/null) || exit 0
+if [[ -n $pane_tty && -w $pane_tty ]]; then
+    printf '\a' 2>/dev/null >"$pane_tty" || true
+fi
+
+exit 0

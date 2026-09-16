@@ -3,6 +3,9 @@ model_reasoning_effort = "xhigh"
 approval_policy = "on-request"
 approvals_reviewer = "auto_review"
 
+# Set the tmux window flag when a turn finishes. Use a shell to expand `~`.
+notify = ["sh", "-c", "exec ~/.local/bin/agent-notify", "agent-notify"]
+
 [mcp_servers.deepwiki]
 url = "https://mcp.deepwiki.com/mcp"
 enabled = true
@@ -11,6 +14,7 @@ enabled = true
 enabled = true
 
 [tui]
+# Turn completion is handled by agent-notify.
+notifications = false
 status_line = ["current-dir", "model", "reasoning", "context-used", "five-hour-limit", "weekly-limit", "git-branch", "codex-version"]
 status_line_use_colors = true
-
