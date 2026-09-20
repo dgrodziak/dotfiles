@@ -6,7 +6,7 @@ Invoke-Expression (&starship init powershell)
 
 Import-Module PSReadLine
 Set-PSReadlineOption -EditMode vi 
-$env:VISUAL = (gcm vim).Source
+$env:VISUAL = (gcm nvim).Source
 
 # The following command will show all available key bindings
 # Get-PSReadLineKeyHandler -Bound -Unbound

@@ -5,7 +5,7 @@ repos:
         name: Bash syntax
         entry: bash -n
         language: system
-        files: ^(install|bashrc|bash/.*\.bash|shell/.*\.sh)$
+        files: ^(install|bin/[^/]+|bashrc|bash/.*\.bash|shell/.*\.sh)$
 
       - id: zsh-syntax
         name: Zsh syntax
@@ -25,7 +25,7 @@ repos:
       - id: shellcheck
         name: ShellCheck
         args: [--shell=bash, --severity=warning]
-        files: ^(install|bashrc|bash/.*\.bash|shell/.*\.sh)$
+        files: ^(install|bin/[^/]+|bashrc|bash/.*\.bash|shell/.*\.sh)$
 
   - repo: https://github.com/JohnnyMorganz/StyLua
     rev: v2.3.1

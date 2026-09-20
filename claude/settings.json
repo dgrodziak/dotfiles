@@ -5,6 +5,7 @@
     "ask": [],
     "defaultMode": "auto"
   },
+  "model": "claude-fable-5-1[1m]",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh"
@@ -14,5 +15,7 @@
   },
   "effortLevel": "xhigh",
   "tui": "fullscreen",
-  "editorMode": "vim"
+  "theme": "light",
+  "editorMode": "vim",
+  "preferredNotifChannel": "terminal_bell"
 }
