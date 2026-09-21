@@ -13,12 +13,6 @@ repos:
         language: system
         files: ^(zshrc|zsh/.*\.zsh)$
 
-      - id: fish-syntax
-        name: Fish syntax
-        entry: fish --no-execute
-        language: system
-        files: ^(fish/config\.fish|fish/conf\.d/.*\.fish|fish/functions/.*\.fish)$
-
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.11.0.1
     hooks:

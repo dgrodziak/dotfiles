@@ -1,5 +1,15 @@
 # External plugins (initialized after)
 
+# Bind the autosuggest widgets once at the first prompt instead of on every prompt,
+# which doubles per prompt cost (~13ms).
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Ctrl+N accepts the whole suggestion, Ctrl+F one word
+bindkey -M viins '^N' autosuggest-accept
+bindkey -M viins '^ ' autosuggest-clear
+bindkey -M viins '^X' autosuggest-toggle
+bindkey -M viins '^F' forward-word
+
 # Syntax highlighting
 
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

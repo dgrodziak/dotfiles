@@ -20,12 +20,6 @@ elif [[ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi 
 
-# Add miniconda to the $PATH if available
-if [[ -f "${HOME}/miniconda3/etc/profile.d/conda.sh" ]]; then
-    # shellcheck source=/dev/null
-    . "${HOME}/miniconda3/etc/profile.d/conda.sh"
-fi
-
 # Add mssql-tools to $PATH if available
 if [[ -d /opt/mssql-tools18/bin ]]; then
     export PATH="$PATH:/opt/mssql-tools18/bin"

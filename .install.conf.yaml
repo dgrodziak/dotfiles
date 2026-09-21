@@ -10,7 +10,6 @@
     - touch codex/local.config.toml
     - touch gitconfig.local
     - touch shell.local.sh
-    - touch shell.local.fish
     - touch starship.local.toml
     - touch ssh/config.local
 
@@ -22,10 +21,6 @@
     ~/.claude/statusline.sh: claude/statusline.sh
     ~/.codex/config.toml: codex/config.toml
     ~/.codex/local.config.toml: codex/local.config.toml
-    ~/.config/fish/config.fish: fish/config.fish
-    ~/.config/fish/completions: fish/completions
-    ~/.config/fish/conf.d: fish/conf.d
-    ~/.config/fish/functions: fish/functions
     ~/.config/lazygit/config.yml: lazygit/config.yml
     ~/.config/nvim: nvim
     ~/.config/ruff/ruff.toml: ruff.toml
@@ -43,7 +38,6 @@
     ~/.pythonrc:
     ~/.shell:
     ~/.shell.local.sh: shell.local.sh
-    ~/.shell.local.fish: shell.local.fish
     ~/.ssh/config: ssh/config
     ~/.ssh/config.local: ssh/config.local
     ~/.tmux.conf:
