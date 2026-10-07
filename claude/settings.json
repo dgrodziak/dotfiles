@@ -24,7 +24,16 @@
     "command": "~/.claude/statusline.sh"
   },
   "enabledPlugins": {
-    "mattpocock-skills@claude-plugins-official": true
+    "mattpocock-skills@claude-plugins-official": true,
+    "polars@polars": true
+  },
+  "extraKnownMarketplaces": {
+    "polars": {
+      "source": {
+        "source": "github",
+        "repo": "polars-inc/skills"
+      }
+    }
   },
   "effortLevel": "xhigh",
   "tui": "fullscreen",
